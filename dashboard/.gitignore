@@ -1,0 +1,8 @@
+node_modules/
+.evidence/
+.svelte-kit/
+.DS_Store
+.env
+.env.*
+*.options.yaml
+.vscode/settings.json

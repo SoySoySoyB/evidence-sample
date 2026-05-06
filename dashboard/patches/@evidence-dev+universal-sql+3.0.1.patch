@@ -1,0 +1,22 @@
+diff --git a/node_modules/@evidence-dev/universal-sql/src/client-duckdb/browser.js b/node_modules/@evidence-dev/universal-sql/src/client-duckdb/browser.js
+index 27c5b43..adad2be 100644
+--- a/node_modules/@evidence-dev/universal-sql/src/client-duckdb/browser.js
++++ b/node_modules/@evidence-dev/universal-sql/src/client-duckdb/browser.js
+@@ -37,14 +37,15 @@ export async function initDB() {
+ 	try {
+ 		const useEh = await getPlatformFeatures().then((x) => x.wasmExceptions);
+ 
++		const DUCKDB_CDN = 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.32.0/dist';
+ 		const DUCKDB_CONFIG = useEh
+ 			? {
+-					mainModule: (await import('@duckdb/duckdb-wasm/dist/duckdb-eh.wasm?url')).default,
++					mainModule: `${DUCKDB_CDN}/duckdb-eh.wasm`,
+ 					mainWorker: (await import('@duckdb/duckdb-wasm/dist/duckdb-browser-eh.worker.js?worker'))
+ 						.default
+ 				}
+ 			: {
+-					mainModule: (await import('@duckdb/duckdb-wasm/dist/duckdb-mvp.wasm?url')).default,
++					mainModule: `${DUCKDB_CDN}/duckdb-mvp.wasm`,
+ 					mainWorker: (await import('@duckdb/duckdb-wasm/dist/duckdb-browser-mvp.worker.js?worker'))
+ 						.default
+ 				};

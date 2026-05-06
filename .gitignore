@@ -1,0 +1,17 @@
+# Terraform
+**/.terraform/
+**/terraform.tfstate
+**/terraform.tfstate.*
+**/terraform.tfstate.backup
+**/*.tfplan
+**/terraform.tfvars
+
+# 作業メモ
+tmp/
+
+# Claude Code 設定
+.claude/
+
+# OS / Editor
+.DS_Store
+.vscode/settings.json

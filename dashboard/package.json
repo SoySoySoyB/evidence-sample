@@ -1,0 +1,26 @@
+{
+  "name": "retail-dashboard",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "evidence dev --open /",
+    "build": "evidence build",
+    "build:strict": "evidence build:strict",
+    "sources": "evidence sources",
+    "preview": "evidence preview",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@evidence-dev/core-components": "5.4.2",
+    "@evidence-dev/csv": "1.0.16",
+    "@evidence-dev/duckdb": "2.0.1",
+    "@evidence-dev/evidence": "40.1.8"
+  },
+  "devDependencies": {
+    "patch-package": "8.0.1"
+  },
+  "overrides": {
+    "typescript": "^5.0.0"
+  }
+}
