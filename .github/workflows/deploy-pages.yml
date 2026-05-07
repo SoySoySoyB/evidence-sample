@@ -40,6 +40,9 @@ jobs:
       - name: Run sources (CSV -> Parquet)
         run: npm run sources
 
+      # Evidence sdk は BASE_PATH 環境変数を読まないため、deployment.basePath を
+      # ここで evidence.config.yaml に append する。ローカル dev / Cloudflare Pages
+      # 側に basePath が伝播するのを避けるため CI 限定で行う。
       - name: Configure basePath for GitHub Pages
         run: |
           cat >> evidence.config.yaml <<EOF
