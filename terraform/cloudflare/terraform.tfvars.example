@@ -1,0 +1,14 @@
+# --- 必須 (公開 / 認証どちらでも) ---
+cloudflare_api_token  = "your-cloudflare-api-token"
+cloudflare_account_id = "your-account-id"
+github_owner          = "your-github-owner"
+# github_repo        = "evidence-sample"   # default: evidence-sample
+# pages_project_name = "retail-dashboard"  # default: retail-dashboard
+
+# --- Google 認証を有効化する場合のみ以下を設定 ---
+# enable_google_auth         = true
+# google_oauth_client_id     = "your-google-oauth-client-id"
+# google_oauth_client_secret = "your-google-oauth-client-secret"
+# session_duration           = "24h"
+
+# viewer_emails = ["alice@example.com", "bob@example.com"]
